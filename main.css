@@ -1,19 +1,12 @@
 * {
     text-align: center;
     font-style: italic;
-    box-sizing: border-box;
-}
-
-
-
-body {
-    background-color: powderblue;
-
+    box-sizing: border-box;background-color: powderblue;
 }
 
 button {
     display: inline-block;
-    background: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 0, 0, 0.5), rgba(180, 255, 80, 0.5));
+    background: linear-gradient(to right, rgba(100, 95, 161, 0.5), rgba(10, 7, 22, 0.5), rgba(100, 95, 161, 0.5));
     /* background: linear-gradient(180deg, #e1e1e1, #7d7d7d); Alternative zu oben*/
     border-radius: 5px;
     color: white;
@@ -30,18 +23,38 @@ button {
 
 .inhalte{
     padding: 30px;
-    background-color: lightskyblue;
-    border:beige 2px solid;
+    background-color: lightskyblue;   
 }
+  input {
+    flex: 0 1 60%;
+  }
+  
+  label {
+    flex: 0 1 40%;
+  }
+  #wrapper{
+      width: 30%;
+      text-align: center;
+      margin: 50px auto;
+  }
+  div.form {
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    padding: 2px;
+  }
+  
 .headline{
     padding: 30px;
     background-color: rgb(107, 166, 202);
-    border:beige 2px solid;
-    text-align: center;
+    font-weight: bold;
+    
 }
+
 .hl{
     max-width: 800px;
     display: grid;
     margin: 50px auto;
     grid-template-columns: repeat(5, 1fr); 
+    grid-gap: 3px;
 }

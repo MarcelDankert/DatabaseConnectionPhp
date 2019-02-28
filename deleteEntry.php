@@ -10,7 +10,6 @@
     </head>
     <body>
         <h1>Datensätze anzeigen!</h1>
-        <hr>
         <?php
               error_reporting(E_ALL|E_STRICT);
               $servername = "localhost";
@@ -50,8 +49,7 @@
             }   
             echo "</div>";
         ?>
-        <button onclick="window.location.href = 'updateValues.php'">Datensatz ändern</button>
         <button onclick="window.location.href = 'insertValues.php'">Datensatz hinzufügen</button>
-        <button onclick="window.location.href = 'deleteEntry.php'">Datensatz löschen</button>
+        <button onclick="window.location.href = 'deleteEntry.php'">Datensatz hinzufügen</button>
     </body>
 </html>
