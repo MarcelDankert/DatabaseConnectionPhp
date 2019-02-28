@@ -1,6 +1,7 @@
 * {
     text-align: center;
     font-style: italic;
+    box-sizing: border-box;
 }
 
 
@@ -27,16 +28,6 @@ button {
     font-size: 1.5em;
 }
 
-section{
-    max-width: 900px;
-    margin: 30px auto;
-    background: blue;
-    color: #FFF;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-   
-    
-}
 .inhalte{
     padding: 30px;
     background-color: lightskyblue;
@@ -46,4 +37,11 @@ section{
     padding: 30px;
     background-color: rgb(107, 166, 202);
     border:beige 2px solid;
+    text-align: center;
+}
+.hl{
+    max-width: 800px;
+    display: grid;
+    margin: 50px auto;
+    grid-template-columns: repeat(5, 1fr); 
 }

@@ -10,7 +10,6 @@
     </head>
     <body>
         <h1>Datensätze anzeigen!</h1>
-        <section>
         <?php
               error_reporting(E_ALL|E_STRICT);
               $servername = "localhost";
@@ -23,6 +22,7 @@
                   die("Connection failed: " . mysqli_connect_error());
               }
               $showAll = "SELECT * FROM tbl_personen;";
+              mysqli_query($conn, "SET NAMES UTF8");
               $result = mysqli_query($conn, $showAll) or die (mysqli_error($conn));
               $dsAnzahl = mysqli_num_rows($result);
               $feldAnzahl = mysqli_num_fields($result);
@@ -32,10 +32,12 @@
               echo "<hr>";
               */
              // Überschriften anzeigen
+             echo "<div class='hl'>";
              $ds = mysqli_fetch_assoc($result);
              foreach ($ds as $index => $wert) {
                  echo "<div class='headline'>".strtoupper($index)."</div>";
              }
+          
              // -------------- Inhalte anzeigen ---------------------------------------
              /* Setz den index wieder auf null, damit wieder von vorn angefangen wird*/
              mysqli_data_seek($result,0); 
@@ -44,10 +46,23 @@
                 foreach ($ds as $wert) {
                     echo "<div class='inhalte'>".$wert."</div>";
                 }
+            }   
+            echo "</div>";
+            /*
+            echo '<table border="1">';
+            while ($zeile = mysqli_fetch_assoc($ds))
+            {
+              echo "<tr>";
+              echo "<td>". $zeile['personalNr'] . "</td>";
+              echo "<td>". $zeile['vorname'] . "</td>";
+              echo "<td>". $zeile['nachname'] . "</td>";
+              echo "<td>". $zeile['gehalt'] . "</td>";
+              echo "<td>". $zeile['geburtstag'] . "</td>";
+              echo "</tr>";
             }
-            
+            echo "</table>";
+            */
         ?>
-        </section>
         <button onclick="window.location.href = 'createTable.php'">Datensatz hinzufügen</button>
     </body>
 </html>
