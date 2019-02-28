@@ -35,8 +35,8 @@
             // sql to create table
             $sql = "CREATE TABLE tbl_personen (
                 personalNr INT(11) AUTO_INCREMENT PRIMARY KEY, 
-                firstname VARCHAR(30) NOT NULL,
-                lastname VARCHAR(30) NOT NULL,
+                vorname VARCHAR(30) NOT NULL,
+                nachname VARCHAR(30) NOT NULL,
                 gehalt DECIMAL(6,2) NOT NULL, 
                 geburtstag DATE NOT NULL
                 );";

@@ -34,7 +34,7 @@
              // Überschriften anzeigen
              $ds = mysqli_fetch_assoc($result);
              foreach ($ds as $index => $wert) {
-                 echo "<div class='headline'>".$index."</div>";
+                 echo "<div class='headline'>".strtoupper($index)."</div>";
              }
              // -------------- Inhalte anzeigen ---------------------------------------
              /* Setz den index wieder auf null, damit wieder von vorn angefangen wird*/
