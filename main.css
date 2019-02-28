@@ -1,0 +1,49 @@
+* {
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+body {
+    background-color: powderblue;
+
+}
+
+button {
+    display: inline-block;
+    background: linear-gradient(to right, rgba(255, 215, 0, 0.5), rgba(255, 0, 0, 0.5), rgba(180, 255, 80, 0.5));
+    /* background: linear-gradient(180deg, #e1e1e1, #7d7d7d); Alternative zu oben*/
+    border-radius: 5px;
+    color: white;
+    margin: 0pc 5px 0px 5px;
+    padding: 5px;
+    text-align: center;
+    width: 150px;
+    height: 80px;
+    box-shadow: 5px 3px 6px #000;
+    /* rechts, unten, Schattengrösse, Schattenfarbe */
+    text-shadow: 5px 2px 2px #000;
+    font-size: 1.5em;
+}
+
+section{
+    max-width: 900px;
+    margin: 30px auto;
+    background: blue;
+    color: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   
+    
+}
+.inhalte{
+    padding: 30px;
+    background-color: lightskyblue;
+    border:beige 2px solid;
+}
+.headline{
+    padding: 30px;
+    background-color: rgb(107, 166, 202);
+    border:beige 2px solid;
+}
