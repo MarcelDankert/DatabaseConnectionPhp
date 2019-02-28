@@ -9,7 +9,7 @@
         
     </head>
     <body>
-        <h2>Datenbank Kaffeautomat und Tabelle erstellen</h2>
+        <h2>Datenbank php_database und Tabelle erstellen</h2>
         <?php
             error_reporting(E_ALL|E_STRICT);
             $servername = "localhost";
@@ -23,8 +23,8 @@
             }
 
             // Create database
-            mysqli_query($conn, "DROP DATABASE IF EXISTS kaffeeautomat;");
-            $sql = "CREATE DATABASE kaffeeautomat;";
+            mysqli_query($conn, "DROP DATABASE IF EXISTS php_database;");
+            $sql = "CREATE DATABASE php_database;";
             if (mysqli_query($conn, $sql)) {
                 echo "Database created successfully" . "<hr>";
                 
@@ -40,7 +40,7 @@
                 gehalt DECIMAL(6,2) NOT NULL, 
                 geburtstag DATE NOT NULL
                 );";
-                mysqli_query($conn, "USE kaffeeautomat;");
+                mysqli_query($conn, "USE php_database;");
                 if (mysqli_query($conn, $sql)) {
                     echo "Table tbl_personen created successfully<hr>";
                 } else {
