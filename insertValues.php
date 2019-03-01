@@ -26,7 +26,12 @@
                 die("Connection failed: " . mysqli_connect_error());
             }
 
-            // Eingabe der Formularfelder in Variablen speichern
+            /* 
+            * Eingabe der Formularfelder in Variablen speichern
+            * Die mysqli_real_escape_string() Funktion dient zum maskieren von Zeichen, 
+            * welche sonst in einem SQL statement stören würden.
+            */
+            
             $vorname = mysqli_real_escape_string($conn, $_POST['vorname']);
             $nachname = mysqli_real_escape_string($conn, $_POST['nachname']);
             $gehalt = mysqli_real_escape_string($conn, $_POST['gehalt']);
