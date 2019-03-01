@@ -10,12 +10,12 @@ button {
     border-radius: 5px;
     color: white;
     margin: 0pc 5px 0px 5px;
-    padding: 5px;
-    width: 150px;
-    height: 80px;
+    padding: 3px;
+    width: 100px;
+    height: 50px;
     box-shadow: 5px 3px 6px #000;
     text-shadow: 5px 2px 2px #000;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .inhalte{
@@ -31,6 +31,7 @@ button {
   }
   #wrapper{
       width: 30%;
+      margin: 50px auto;
   }
   div.form {
     display: flex;
