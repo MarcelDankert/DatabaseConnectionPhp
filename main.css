@@ -1,56 +1,72 @@
 * {
-    text-align: center;
-    font-style: italic;
-    box-sizing: border-box;background-color: powderblue;
+  text-align: center;
+  font-style: italic;
+  box-sizing: border-box;
+  background-color: powderblue;
 }
 
 button {
-    display: inline-block;
-    background: linear-gradient(to right, rgba(100, 95, 161, 0.5), rgba(10, 7, 22, 0.5), rgba(100, 95, 161, 0.5));
-    border-radius: 5px;
-    color: white;
-    margin: 0pc 5px 0px 5px;
-    padding: 3px;
-    width: 100px;
-    height: 50px;
-    box-shadow: 5px 3px 6px #000;
-    text-shadow: 5px 2px 2px #000;
-    font-size: 1.2em;
+  display: inline-block;
+  background: linear-gradient(to right, rgba(100, 95, 161, 0.5), rgba(10, 7, 22, 0.5), rgba(100, 95, 161, 0.5));
+  border-radius: 5px;
+  color: white;
+  margin: 0pc 5px 0px 5px;
+  padding: 3px;
+  width: 100px;
+  height: 50px;
+  box-shadow: 5px 3px 6px #000;
+  text-shadow: 5px 2px 2px #000;
+  font-size: 1.2em;
 }
 
-.inhalte{
-    padding: 30px;
-    background-color: lightskyblue;   
-}
-  input {
-    flex: 0 1 60%;
-  }
-  
-  label {
-    flex: 0 1 40%;
-  }
-  #wrapper{
-      width: 30%;
-      margin: 50px auto;
-  }
-  div.form {
-    display: flex;
-    flex-direction: row;
-    margin: 10px auto;
-    padding: 2px;
-  }
-  
-.headline{
-    padding: 30px;
-    background-color: rgb(107, 166, 202);
-    font-weight: bold;
-    
+.inhalte {
+  padding: 30px;
+  background-color: lightskyblue;
 }
 
-.hl{
-    max-width: 800px;
-    display: grid;
-    margin: 50px auto;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-gap: 3px;
+input {
+  flex: 0 1 60%;
+}
+
+label {
+  flex: 0 1 40%;
+}
+
+#wrapper {
+  width: 30%;
+  margin: 50px auto;
+}
+
+div.form {
+  display: flex;
+  flex-direction: row;
+  margin: 10px auto;
+  padding: 2px;
+}
+
+.headline {
+  padding: 30px;
+  background-color: rgb(107, 166, 202);
+  font-weight: bold;
+
+}
+
+.hl {
+  max-width: 800px;
+  display: grid;
+  margin: 50px auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3px;
+}
+
+.hl_del {
+  max-width: 800px;
+  display: grid;
+  margin: 50px auto;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 3px;
+}
+
+input[type="radio"] {
+  transform: scale(1.5);
 }

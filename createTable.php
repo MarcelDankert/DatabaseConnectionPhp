@@ -50,7 +50,11 @@
                             VALUES
                             (null, 'Page', 'Jimmy', 9500.50, '1990-03-20'),
                             (null, 'Lord', 'John', 599.99, '1977-10-10'),
-                            (null, 'Beck', 'Jeff', 0.99, '2000-01-05');
+                            (null, 'Schwammkopf', 'Spongebob', 1599.99, '1999-11-11'),
+                            (null, 'Star', 'Patrick',  99.99, '2000-02-02'),
+                            (null, 'Mustermann', 'Max', 55.55, '1977-10-10'),
+                            (null, 'Musterfrau', 'Maria', 777.77, '1977-10-10'),
+                            (null, 'Dankert', 'Marcel', 9999.99, '1982-04-24');
             "; 
              if (mysqli_query($conn, $addPeople)) {
                 echo "Datensätze eingefügt";
