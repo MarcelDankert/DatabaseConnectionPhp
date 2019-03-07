@@ -55,7 +55,7 @@
                 }
             }  
             echo "</div>";
-            echo "<input type='submit' name='submit' value='Datensatz löschen' id='delBtn'>";
+            echo "<input type='submit' name='submit' value='Datensatz löschen' id='delBtn' onclick='if (!(confirm(\"Sind sie sicher, dass sie diese Person löschen wollen?\"))) return false'>";
             echo "</form>"; 
 
         ?>
