@@ -25,8 +25,8 @@
               $showAll = "SELECT * FROM tbl_personen;";
               mysqli_query($conn, "SET NAMES UTF8");
               $result = mysqli_query($conn, $showAll) or die (mysqli_error($conn));
-              $dsAnzahl = mysqli_num_rows($result);
-              $feldAnzahl = mysqli_num_fields($result);
+              $dsAnzahl = mysqli_num_rows($result); // ermittelt Zeilen
+              $feldAnzahl = mysqli_num_fields($result); // ermittelt spalten
                 /*
               echo "<p>".$feldAnzahl." Spalten</p>";
               echo "<p>".$dsAnzahl." Datensätze</p>";
