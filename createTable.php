@@ -26,14 +26,14 @@
             mysqli_query($conn, "DROP DATABASE IF EXISTS php_database;");
             $sql = "CREATE DATABASE php_database;";
             if (mysqli_query($conn, $sql)) {
-                echo "Database created successfully" . "<hr>";
+                echo "Datenbank wurde erstellt" . "<hr>";
                 
             } else {
-                echo "Error creating database: " . mysqli_error($conn) . "<hr>";
+                echo "Fehler beim Erstellen der Datenbank: " . mysqli_error($conn) . "<hr>";
             }
 
             // sql to create table
-            $sql = "CREATE TABLE tbl_personen (
+            $sql = "CREATE TABLE php_database.tbl_personen (
                 personalNr INT(11) AUTO_INCREMENT PRIMARY KEY, 
                 vorname VARCHAR(30) NOT NULL,
                 nachname VARCHAR(30) NOT NULL,
@@ -42,9 +42,9 @@
                 );";
                 mysqli_query($conn, "USE php_database;");
                 if (mysqli_query($conn, $sql)) {
-                    echo "Table tbl_personen created successfully<hr>";
+                    echo "Tabelle tbl_personen wurde erstellt :-)<hr>";
                 } else {
-                    echo "Error creating table: " . mysqli_error($conn). "<hr>";
+                    echo "Fehler beim Erstellen der Tabelle: " . mysqli_error($conn). "<hr>";
                 }   
             $addPeople = "  INSERT INTO tbl_personen
                             VALUES
@@ -53,9 +53,9 @@
                             (null, 'Beck', 'Jeff', 0.99, '2000-01-05');
             "; 
              if (mysqli_query($conn, $addPeople)) {
-                echo "Entitys created";
+                echo "Datensätze eingefügt";
             } else {
-                echo "Error creating entitys: " . mysqli_error($conn);
+                echo "Fehler beim Erstellen der Datensätze: " . mysqli_error($conn);
             } 
             echo "<hr>";
             mysqli_close($conn);
