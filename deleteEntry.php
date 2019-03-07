@@ -33,6 +33,7 @@
               echo "<hr>";
               */
              // ----------------Überschriften anzeigen -------------------------------
+             echo "<form action='./deleteEntryFinal.php' method='post'>";
              echo "<div class='hl_del'>";
              $ds = mysqli_fetch_assoc($result);
              echo "<div class='headline'>AUSWAHL</div>";
@@ -43,14 +44,20 @@
              // -------------- Inhalte anzeigen ---------------------------------------
              /* Setz den index wieder auf null, damit wieder von vorn angefangen wird*/
              mysqli_data_seek($result,0); 
+
+             // Alle Datensätze auslesen und Formular für Radio-Buttons bauen
+             
              for ($i = 0; $i < $dsAnzahl; $i++) {
                 $ds = mysqli_fetch_row($result); // extrahiert jeden Datensatz
-                echo "<div class='inhalte'><input type='radio' name='del'></div>"; // Werte anzeigen
+                echo "<div class='inhalte'><input type='radio' name='del' value='".$ds[0]."'></div>"; // Werte anzeigen
                 foreach ($ds as $wert) {
                     echo "<div class='inhalte'>".$wert."</div>"; // Werte anzeigen
                 }
-            }   
+            }  
             echo "</div>";
+            echo "<input type='submit' name='submit' value='Datensatz löschen' id='delBtn'>";
+            echo "</form>"; 
+
         ?>
         <button onclick="window.location.href = 'showTable.php'">Daten anzeigen</button>
     </body>
